@@ -12,8 +12,10 @@ install:
 clean:
 	go clean
 	rm -f *.log
-	docker rmi -f donbstringham/${NAME}
 
+delimage:
+	docker rmi -f donbstringham/${NAME}
+	
 dockerize:
 	docker build -t donbstringham/${NAME} .
 
